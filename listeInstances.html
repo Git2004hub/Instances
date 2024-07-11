@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afficher la liste des instances</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Liste des instances créées</h2>
+        <div id="controls" class="sort">
+            <label for="sortCriteria">Trier par :</label>
+            <select id="sortCriteria">
+                <option value="code">Code</option>
+                <option value="designation">Désignation</option>
+                <option value="proprietaire">Propriétaire</option>
+                <option value="ownership">Type</option>
+                <option value="dateCreation">Date de création</option>
+                <option value="dateCloture">Date de clôture</option>
+                <option value="observation">Observation</option>
+            </select>
+            <button id="sortOrderButton" onclick="toggleSortOrder()" class="sortButton">Croissant</button>
+        </div>
+        <div id="instanceDetails"></div>
+        <button id="addInstanceButton" onclick="window.location.href='creerInstance.html'" class="addButton">+ Ajouter une nouvelle instance</button>
+        <button id="deleteAllButton" onclick="deleteAllInstances()" class="deleteAllButton">- Supprimer toutes les instances</button>
+        <button onclick="window.location.href='index.html'" class="backToMenu">Retour au menu</button>
+    </div>
+    
+    <script src="script2.js"></script>
+</body>
+</html>

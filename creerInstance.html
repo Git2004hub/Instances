@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une nouvelle instance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Créer une nouvelle instance</h2>
+        <form id="instanceForm">
+            <div class="form-group">
+                <label for="code">Code :</label>
+                <input type="text" id="code" name="code" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">Désignation de l'instance :</label>
+                <input type="text" id="designation" name="designation" required>
+            </div>
+            <div class="form-group">
+                <label for="proprietaire">Propriétaire :</label>
+                <input type="text" id="proprietaire" name="proprietaire" required>
+            </div>
+            <div className="form-group radio-group">
+                <label htmlFor="propre/collective">Type de l'instance : (choisissez une option)</label><br></br>
+                <input type="radio" id="propre" name="ownership" value="Propre" />
+                <label htmlFor="propre">Propre</label>
+                <input type="radio" id="collective" name="ownership" value="Collective" />
+                <label htmlFor="collective">Collective</label>
+            </div>
+            <div class="form-group">
+                <label for="dateCreation">Date de création :</label>
+                <input type="date" id="dateCreation" name="dateCreation" required>
+            </div>
+            <div class="form-group">
+                <label for="dateCloture">Date de clôture :</label>
+                <input type="date" id="dateCloture" name="dateCloture" required>
+            </div>
+            <p id="error-message" style="color: red; display: none;">La date de clôture ne peut pas être antérieure à la date de création.</p>
+            <div class="form-group">
+                <label for="observation">Observations :</label>
+                <textarea id="observation" name="observation" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enregistrer l'instance</button>
+            </div>
+        </form>
+        <button onclick="window.location.href='index.html'" class="backToMenu">Retour au menu</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

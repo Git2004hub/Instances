@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+.form-container h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.option {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.form-group .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form-group .radio-group input {
+    margin-right: 10px;
+}
+
+.form-group .radio-group label {
+    margin-right: 20px;
+}
+
+.form-group textarea {
+    height: 80px;
+}
+
+button {
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    margin-left: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+    display: block; 
+    width: 50%; 
+}
+
+.form-group button {
+    background-color: green;
+    margin-bottom: -30px;
+}
+
+.addButton {
+    margin-top: 50px;
+    background-color: green;
+}
+
+.deleteButton {
+    margin-left: 35%;
+    background-color: red;
+    width: 30%;
+}
+
+.deleteAllButton {
+    background-color: red;
+}
+
+.backToMenu {
+    background-color: gray;
+}
+
+.sortButton {
+    font-size: x-small;
+    height: 20px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 10%; 
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instance-entry {
+    margin: 10px 0;
+}
+
+.instance-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
