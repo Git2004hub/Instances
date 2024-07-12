@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const randomNumber = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
-    document.getElementById('code').value = 'CODE-' + randomNumber;
+    document.getElementById('code').value = generateRandomCode(10);
 
     const dateCreationInput = document.getElementById('dateCreation');
     const today = new Date();
@@ -35,3 +34,22 @@ document.getElementById('instanceForm').addEventListener('submit', function(even
     
     window.location.href = 'listeInstances.html';
 });
+
+function generateRandomCode(length) {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const digits = '0123456789';
+    let result = '';
+    let l = length / 2;
+
+    for (let i = 0; i < l; i++) {
+        const randomLetterIndex = Math.floor(Math.random() * letters.length);
+        result += letters.charAt(randomLetterIndex);
+    }
+
+    for (let i = 0; i < l; i++) {
+        const randomDigitIndex = Math.floor(Math.random() * digits.length);
+        result += digits.charAt(randomDigitIndex);
+    }
+
+    return result;
+}
