@@ -41,12 +41,12 @@ function generateRandomCode(length) {
     let result = '';
     let l = length / 2;
 
-    for (let i = 0; i < l; i++) {
+    for (let i = 0; i < l-2; i++) {
         const randomLetterIndex = Math.floor(Math.random() * letters.length);
         result += letters.charAt(randomLetterIndex);
     }
 
-    for (let i = 0; i < l; i++) {
+    for (let i = 0; i < l+1; i++) {
         const randomDigitIndex = Math.floor(Math.random() * digits.length);
         result += digits.charAt(randomDigitIndex);
     }
