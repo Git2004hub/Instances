@@ -37,7 +37,6 @@ document.getElementById('instanceForm').addEventListener('submit', function(even
 
 function generateRandomCode() {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const digits = '0123456789';
     let result = '';
 
     for (let i = 0; i < 3; i++) {
@@ -46,8 +45,8 @@ function generateRandomCode() {
     }
 
     for (let i = 0; i < 6; i++) {
-        const randomDigitIndex = Math.floor(Math.random() * digits.length);
-        result += digits.charAt(randomDigitIndex);
+        const randomDigit = Math.floor(Math.random() * 10);
+        result += randomDigit;
     }
 
     return result;
