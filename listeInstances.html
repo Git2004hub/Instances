@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
+    <div class="form-container2">
         <h2>Liste des instances créées</h2>
         <div id="controls" class="sort">
             <label for="sortCriteria">Trier par :</label>
@@ -22,7 +22,25 @@
             </select>
             <button id="sortOrderButton" onclick="toggleSortOrder()" class="sortButton">Croissant</button>
         </div>
-        <div id="instanceDetails"></div>
+        <div id="instanceDetails">
+            <table id="instancesTable">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Désignation</th>
+                        <th>Propriétaire</th>
+                        <th>Type</th>
+                        <th>Date de création</th>
+                        <th>Date de clôture</th>
+                        <th>Observations</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les instances seront insérées ici -->
+                </tbody>
+            </table>
+        </div>
         <button id="addInstanceButton" onclick="window.location.href='creerInstance.html'" class="addButton">+ Ajouter une nouvelle instance</button>
         <button id="deleteAllButton" onclick="deleteAllInstances()" class="deleteAllButton">- Supprimer toutes les instances</button>
         <button onclick="window.location.href='index.html'" class="backToMenu">Retour au menu</button>
