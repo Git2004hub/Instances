@@ -17,29 +17,26 @@ function loadInstances() {
         });
     }
 
-    const detailsContainer = document.getElementById('instanceDetails');
-    detailsContainer.innerHTML = '';
+    const tableBody = document.querySelector('#instancesTable tbody');
+    tableBody.innerHTML = '';
 
     if (instances.length > 0) {
         instances.forEach(instance => {
-            const instanceDiv = document.createElement('div');
-            instanceDiv.classList.add('instance-entry');
-            instanceDiv.innerHTML = `
-                <div class="instance-card">
-                    <p><strong>Code :</strong> ${instance.code}</p>
-                    <p><strong>Désignation de l'instance :</strong> ${instance.designation}</p>
-                    <p><strong>Propriétaire :</strong> ${instance.proprietaire}</p>
-                    <p><strong>Type de l'instance :</strong> ${instance.ownership}</p>
-                    <p><strong>Date de création :</strong> ${instance.dateCreation}</p>
-                    <p><strong>Date de clôture :</strong> ${instance.dateCloture}</p>
-                    <p><strong>Observations :</strong> ${instance.observation}</p>
-                    <button onclick="confirmDeletion('${instance.id}')" class="deleteButton">Supprimer</button>
-                </div>
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${instance.code}</td>
+                <td>${instance.designation}</td>
+                <td>${instance.proprietaire}</td>
+                <td>${instance.ownership}</td>
+                <td style="min-width: 80px;">${instance.dateCreation}</td>
+                <td style="min-width: 80px;">${instance.dateCloture}</td>
+                <td>${instance.observation}</td>
+                <td><button onclick="confirmDeletion('${instance.id}')" class="deleteButton">Supprimer</button></td>
             `;
-            detailsContainer.appendChild(instanceDiv);
+            tableBody.appendChild(row);
         });
     } else {
-        detailsContainer.innerHTML = '<p>Aucune donnée disponible.</p>';
+        tableBody.innerHTML = '<tr><td colspan="8">Aucune donnée disponible.</td></tr>';
     }
 }
 
