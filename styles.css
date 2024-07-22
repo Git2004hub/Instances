@@ -16,16 +16,12 @@ body {
     width: 800px;
 }
 
-.form-container2 {
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.fc2 {
     width: 1200px;
     min-height: 700px;
 }
 
-.form-container h2 , .form-container2 h2 {
+.form-container h2 , .form-container fc2 h2 {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;

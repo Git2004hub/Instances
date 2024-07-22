@@ -31,7 +31,12 @@ function loadInstances() {
                 <td style="min-width: 80px;">${instance.dateCreation}</td>
                 <td style="min-width: 80px;">${instance.dateCloture}</td>
                 <td>${instance.observation}</td>
-                <td><button onclick="confirmDeletion('${instance.id}')" class="deleteButton">Supprimer</button></td>
+                <td>
+                    <button onclick="confirmDeletion('${instance.id}')" 
+                        class="deleteButton">
+                        Supprimer
+                    </button>
+                </td>
             `;
             tableBody.appendChild(row);
         });
@@ -43,9 +48,9 @@ function loadInstances() {
 function confirmDeletion(id) {
     const instances = JSON.parse(localStorage.getItem('instances')) || [];
     const instanceToDelete = instances.find(instance => instance.id === id);
-    const confirmationMessage = `Êtes-vous sûr de vouloir supprimer l'instance avec le code : ${instanceToDelete.code} ?`;
+    const code = instanceToDelete.code;
 
-    if (confirm(confirmationMessage)) {
+    if (confirm(`Êtes-vous sûr de vouloir supprimer l'instance avec le code : ${code} ?`)) {
         deleteInstance(id);
     }
 }
@@ -59,7 +64,7 @@ function deleteInstance(id) {
 
 function toggleSortOrder() {
     ascending = !ascending;
-    document.getElementById('sortOrderButton').textContent = ascending ? 'Croissant' : 'Décroissant';
+    document.getElementById('toggle').textContent = ascending ? 'Croissant' : 'Décroissant';
     loadInstances();
 }
 
