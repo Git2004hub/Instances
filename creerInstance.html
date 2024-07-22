@@ -25,7 +25,9 @@
                 <input type="text" id="proprietaire" name="proprietaire" required>
             </div>
             <div className="form-group radio-group">
-                <label htmlFor="propre/collective">Type de l'instance : (choisissez une option)</label><br></br>
+                <label htmlFor="propre/collective">
+                    Type de l'instance : (choisissez une option)
+                </label><br></br>
                 <input type="radio" id="propre" name="ownership" value="Propre" />
                 <label htmlFor="propre">Propre</label>
                 <input type="radio" id="collective" name="ownership" value="Collective" />
@@ -39,7 +41,9 @@
                 <label for="dateCloture">Date de clôture :</label>
                 <input type="date" id="dateCloture" name="dateCloture">
             </div>
-            <p id="error-message" style="color: red; display: none;">La date de clôture ne peut pas être antérieure à la date de création.</p>
+            <p id="error-message" style="color: red; display: none;">
+                La date de clôture ne peut pas être antérieure à la date de création.
+            </p>
             <div class="form-group">
                 <label for="observation">Observations :</label>
                 <textarea id="observation" name="observation" required></textarea>
@@ -48,9 +52,10 @@
                 <button type="submit">Enregistrer l'instance</button>
             </div>
         </form>
-        <button onclick="window.location.href='index.html'" class="backToMenu">Retour au menu</button>
+        <button onclick="window.location.href='index.html'" class="backToMenu">
+            Retour au menu
+        </button>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
